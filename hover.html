@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Mon hover Magique</title>
+    <style>
+        body{
+           background-color: #0B65C5; 
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+        }
+        .hoverClass{
+            position: relative;
+            width: 50%;
+            margin: 10% 0;
+        }
+        .rs{
+            position: relative;
+            top: 0;
+            left: 50%;
+    /*Affichage voiture*/
+            background-image: url(new-ford-focus-rs.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        .modif .active{
+            opacity: 1;
+        }
+        .modif{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+    /*voiture modifier*/
+            background-image: url(new-ford-focus-rs-red.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            opacity: 0;
+        }
+           .modif:hover{
+            opacity: 1;
+    /*temps de transiton sur l'opacité*/
+            transition: opacity 0.7s;
+        }
+    </style>
+</head>
+<body>
+    <div class="hoverClass">
+        <div class="rs">
+            <div class="modif active"></div>
+        </div>
+    </div>
+</body>
+</html>
